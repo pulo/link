@@ -33,9 +33,9 @@ class Seed{
     */
     breakLink(_obj){
         //先判断子对象
-        this.children.forEach(function(element, index){
+        this.children.forEach((element, index)=>{
             if (element == _obj) {
-                self.children.splice(index, 1);
+                this.children.splice(index, 1);
                 element.parent = undefined;
             }
         })

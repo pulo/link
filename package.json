@@ -3,11 +3,11 @@
   "version": "2.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    
-  },
+  "dependencies": {},
   "devDependencies": {
-    "eslint": "^2.10.2"
+    "chai": "^3.5.0",
+    "eslint": "^2.10.2",
+    "graceful-console": "^0.5.1"
   },
   "scripts": {},
   "author": "minqi.zhumq",
