@@ -6,8 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "chai": "^3.5.0",
-    "eslint": "^2.10.2",
-    "graceful-console": "^0.5.1"
+    "eslint": "^2.10.2"
   },
   "scripts": {},
   "author": "minqi.zhumq",
