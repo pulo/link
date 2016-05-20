@@ -56,8 +56,6 @@ class Factory extends Seed{
         
         _obj.destroy();
         global.xxx=this.objectList;
-        
-        
     }
 }
 module.exports = new Factory();
