@@ -38,12 +38,15 @@ return array
 根据tag搜索拥有该tag的对象
 
 
-
 #### getObjectList
 ```
 Link.getObjectList()
 ```
 获取当前活动的所有对象列表
+
+### getObjectRelation
+
+获取所有Link对象的关系树
 
 ## Link.Seed
 基类
@@ -71,23 +74,6 @@ var YouClass = Link.Seed.extend({
 
 > 所以我们建议将一些启动阶段要做的事情放在boot里，如创建子对象、绑定事件等，而init里仅放一些配置信息即可。
 
-
-调用父类的同名方法
-
-#### subscribe
-```
-object.subscribe(channel,function)
-@param channel 所订阅的频道
-@param function  回调
-```
-订阅某个[广播通知](#link-radio)
-
-#### unSubscribe
-```
-object.unSubscribe(channel)
-@param channel 所订阅的频道
-```
-取消该对象对某个广播通知的订阅
 
 #### parent
 ```

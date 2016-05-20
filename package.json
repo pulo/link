@@ -1,7 +1,7 @@
 {
-  "name": "link",
-  "version": "2.0.0",
-  "description": "",
+  "name": "js-link",
+  "version": "1.0.0",
+  "description": "通过一种链式关系、将对象对象进行，统一管理，统一维护",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
@@ -9,6 +9,20 @@
     "eslint": "^2.10.2"
   },
   "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pulo/link.git"
+  },
   "author": "minqi.zhumq",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pulo/link/issues"
+  },
+  "homepage": "https://github.com/pulo/link#readme",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "javascript"
+  ]
 }
