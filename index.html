@@ -1,10 +1,42 @@
 <html>
 
 <head>
-  <script src=".build/link.js"></script>
+  <script src="build/link.js"></script>
+  <script>
+    var a1 = Link.create(Link.Seed)
+    a1._name='a1';
+    var a11 = Link.create(Link.Seed,{},a1);
+    a11._name='a11';
+    var a111 = Link.create(Link.Seed,{},a11);
+    a111._name='a111';
+    var a112 = Link.create(Link.Seed,{},a11);
+    a112._name='a112';
+    var a12 = Link.create(Link.Seed,{},a1);
+    a12._name='a12';
+    var a121 = Link.create(Link.Seed,{},a12);
+    a121._name='a121';
+    var a122 = Link.create(Link.Seed,{},a12);
+    a122._name='a122';
+
+//打印关系表
+
+  Link.getObjectRelation()
+
+    Link.destroy(a11);
+
+    // 2、测试断掉A2,然后看A1和A111的关系
+
+    console.info(a1,a111);
+
+    // 查找某个节点
+    var list=Link.find('factory');
+    console.log(list);
+
+  </script>
 </head>
 
 <body>
+  <div id="objectRelation"></div>
 </body>
 
 </html>

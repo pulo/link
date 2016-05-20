@@ -1,4 +1,4 @@
 .vscode
-.build/
+build/
 node_modules/
 testcase/

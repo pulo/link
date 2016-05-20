@@ -1,7 +1,7 @@
 
 require('./src/link');
 var util = require('util');
-
+ 
 //1、建立三层关系
 /*
   a1:{
@@ -29,6 +29,12 @@ a1.name='a1';
     a121.name='a121';
     var a122 = Link.create(Link.Seed,{},a12);
     a122.name='a122';
+
+//打印关系表
+
+  var rel = Link.getObjectRelation();
+  console.log(rel);
+    
     
   Link.destroy(a11);
 
@@ -39,3 +45,4 @@ console.info(util.inspect(a1,true,null), util.inspect(a111,true,null));
 //查找某个节点
 var list=Link.find('factory');
 console.log(list);
+debugger;

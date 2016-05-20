@@ -22,6 +22,36 @@ class ClassLink extends Seed {
 	getObjectList() {
 		return factory.objectList;
 	}
+	
+	
+	//获取所有对象的关系，返回一个对象形态
+	getObjectRelation(){
+		let _relation = {};
+		_relation['root'] = [];
+		//思路:遍历所有根对象，并且对根对象的children进行遍历，直到无children
+		//步骤1：找出根对象
+		for(let index in factory.objectList){
+			//不是factory & 无parent
+			if((factory.objectList[index]._id !== 0) && (factory.objectList[index].parent === undefined)){
+				//将跟对象丢进root里
+				// //步骤2：遍历children
+				var check = function(_obj,addTo){
+					var _r = {
+						id:_obj._id,
+						tags:_obj.tags,
+						children:[]
+					}
+					addTo.push(_r);
+					_obj.children.forEach(function(elem){
+						check(elem, _r.children);
+					})
+				}
+				check(factory.objectList[index], _relation['root']);
+			}
+		}
+		return _relation;
+		
+	}
 	destroy(_obj) {
 		factory.destroy(_obj);
 	}
