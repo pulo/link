@@ -2,6 +2,18 @@
 
 ## 简介——intro
 
+## 使用
+### browse
+引用build/link.js
+
+
+
+### node
+`npm install js-link --save`
+
+require('js-link')
+
+
 # 方法——api 
 
 ## Link

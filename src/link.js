@@ -8,6 +8,12 @@ class ClassLink extends Seed {
 		this.Seed = Seed;
 	}
 	create(_class, _opt, _context) {
+		
+		if((arguments.length==2)&&(_opt._id)){
+					_context = _opt;
+				_opt = {};
+		}
+		
 		return factory.create(_class, _opt, _context);
 	}
 	find(tag) {
@@ -23,7 +29,7 @@ class ClassLink extends Seed {
 		return factory.objectList;
 	}
 	
-	
+
 	//获取所有对象的关系，返回一个对象形态
 	getObjectRelation(){
 		let _relation = {};
@@ -34,9 +40,9 @@ class ClassLink extends Seed {
 			//不是factory & 无parent
 			if((factory.objectList[index]._id !== 0) && (factory.objectList[index].parent === undefined)){
 				//将跟对象丢进root里
-				// //步骤2：遍历children
-				var check = function(_obj,addTo){
-					var _r = {
+				//步骤2：遍历children
+				let check = function(_obj,addTo){
+					let _r = {
 						id:_obj._id,
 						tags:_obj.tags,
 						children:[]
@@ -59,7 +65,7 @@ class ClassLink extends Seed {
 
 //创建全局对象
 if (global) {//说明是node
-	global.Link = new ClassLink();
+	if(!global.Link)global.Link = new ClassLink();
 } else if (window) {
-	window.Link = new ClassLink();
+	if(!window.Link)window.Link = new ClassLink();
 }

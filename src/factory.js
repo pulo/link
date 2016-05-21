@@ -55,7 +55,6 @@ class Factory extends Seed{
         delete this.objectList['link_obj_' + _obj._id];
         
         _obj.destroy();
-        global.xxx=this.objectList;
     }
 }
 module.exports = new Factory();

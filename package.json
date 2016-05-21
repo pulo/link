@@ -1,8 +1,8 @@
 {
   "name": "js-link",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "通过一种链式关系、将对象对象进行，统一管理，统一维护",
-  "main": "index.js",
+  "main": "src/link.js",
   "dependencies": {},
   "devDependencies": {
     "chai": "^3.5.0",
