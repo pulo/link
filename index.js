@@ -45,4 +45,3 @@ console.info(util.inspect(a1,true,null), util.inspect(a111,true,null));
 //查找某个节点
 var list=Link.find('factory');
 console.log(list);
-debugger;
