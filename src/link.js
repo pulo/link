@@ -4,7 +4,7 @@ var factory = require('./factory');
 class ClassLink extends Seed {
 	constructor() {
 		super();
-		this.VERSION = this.version = '2.0.0a';
+		this.VERSION = this.version = '1.0.2';
 		this.Seed = Seed;
 	}
 	create(_class, _opt, _context) {
@@ -45,7 +45,7 @@ class ClassLink extends Seed {
 					let _r = {
 						id:_obj._id,
 						tags:_obj.tags,
-						children:[]
+						children:[],
 					}
 					addTo.push(_r);
 					_obj.children.forEach(function(elem){

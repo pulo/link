@@ -15,20 +15,20 @@ var util = require('util');
     }
   }
 */
-var a1 = Link.create(Link.Seed)
-a1.name='a1';
+  var a1 = Link.create(Link.Seed)
+  a1.name='a1';
   var a11 = Link.create(Link.Seed,{},a1);
   a11.name='a11';
-    var a111 = Link.create(Link.Seed,{},a11);
-    a111.name='a111';
-    var a112 = Link.create(Link.Seed,{},a11);
-    a112.name='a112';
+  var a111 = Link.create(Link.Seed,{},a11);
+  a111.name='a111';
+  var a112 = Link.create(Link.Seed,{},a11);
+  a112.name='a112';
   var a12 = Link.create(Link.Seed,{},a1);
   a12.name='a12';
-    var a121 = Link.create(Link.Seed,{},a12);
-    a121.name='a121';
-    var a122 = Link.create(Link.Seed,{},a12);
-    a122.name='a122';
+  var a121 = Link.create(Link.Seed,{},a12);
+  a121.name='a121';
+  var a122 = Link.create(Link.Seed,{},a12);
+  a122.name='a122';
 
 //打印关系表
 

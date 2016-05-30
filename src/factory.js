@@ -29,8 +29,9 @@ class Factory extends Seed{
                 //为父节点增加节点
                 _context.children.push(_o);
             }
+            _o.create_time_stamp = new Date().getTime();
+            _o.boot();
         }
-        _o.boot();
         return _o;
     }
     idBuild(){
