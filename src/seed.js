@@ -1,4 +1,3 @@
-'use strict';
 class Seed{
     constructor() {
         this.tags = [];
@@ -7,7 +6,6 @@ class Seed{
         this.newTag('seed');
     }
     boot(){
-        
     }
     newTag(tag){
         let isExist = false;
@@ -52,4 +50,4 @@ class Seed{
         })
     }
 }
-module.exports = Seed;
+export default Seed;

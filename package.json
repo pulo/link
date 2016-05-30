@@ -1,6 +1,6 @@
 {
   "name": "js-link",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "通过一种链式关系、将对象对象进行，统一管理，统一维护",
   "main": "src/link.js",
   "dependencies": {},
@@ -11,9 +11,12 @@
     "chai": "^3.5.0",
     "eslint": "^2.10.2",
     "unminified-webpack-plugin": "^1.0.0",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   },
-  "scripts": {},
+  "scripts": {
+    "start":"webpack-dev-server --hot --inline"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pulo/link.git"

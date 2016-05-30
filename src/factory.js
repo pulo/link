@@ -1,7 +1,6 @@
 
-'use strict';
- 
-var Seed = require('./seed');
+
+import Seed from './seed';
 
 class Factory extends Seed{
     constructor(){
@@ -58,4 +57,4 @@ class Factory extends Seed{
         _obj.destroy();
     }
 }
-module.exports = new Factory();
+export default new Factory();

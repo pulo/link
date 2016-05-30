@@ -1,6 +1,6 @@
-'use strict';
-var Seed = require('./seed');
-var factory = require('./factory');
+
+import Seed from './seed';
+import factory from './factory';
 class ClassLink extends Seed {
 	constructor() {
 		super();

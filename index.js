@@ -1,5 +1,5 @@
 
-require('./src/link');
+require('./build/link');
 var util = require('util');
  
 //1、建立三层关系

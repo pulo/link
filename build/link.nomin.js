@@ -48,14 +48,21 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+	var _seed = __webpack_require__(1);
+
+	var _seed2 = _interopRequireDefault(_seed);
+
+	var _factory = __webpack_require__(2);
+
+	var _factory2 = _interopRequireDefault(_factory);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Seed = __webpack_require__(1);
-	var factory = __webpack_require__(2);
 
 	var ClassLink = function (_Seed) {
 		_inherits(ClassLink, _Seed);
@@ -66,7 +73,7 @@
 			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ClassLink).call(this));
 
 			_this.VERSION = _this.version = '1.0.2';
-			_this.Seed = Seed;
+			_this.Seed = _seed2.default;
 			return _this;
 		}
 
@@ -79,15 +86,15 @@
 					_opt = {};
 				}
 
-				return factory.create(_class, _opt, _context);
+				return _factory2.default.create(_class, _opt, _context);
 			}
 		}, {
 			key: 'find',
 			value: function find(tag) {
 				var selObj = [];
-				for (var index in factory.objectList) {
-					if (factory.objectList[index].hasTag(tag)) {
-						selObj.push(factory.objectList[index]);
+				for (var index in _factory2.default.objectList) {
+					if (_factory2.default.objectList[index].hasTag(tag)) {
+						selObj.push(_factory2.default.objectList[index]);
 					}
 				}
 				return selObj;
@@ -95,7 +102,7 @@
 		}, {
 			key: 'getObjectList',
 			value: function getObjectList() {
-				return factory.objectList;
+				return _factory2.default.objectList;
 			}
 
 			//获取所有对象的关系，返回一个对象形态
@@ -107,9 +114,9 @@
 				_relation['root'] = [];
 				//思路:遍历所有根对象，并且对根对象的children进行遍历，直到无children
 				//步骤1：找出根对象
-				for (var index in factory.objectList) {
+				for (var index in _factory2.default.objectList) {
 					//不是factory & 无parent
-					if (factory.objectList[index]._id !== 0 && factory.objectList[index].parent === undefined) {
+					if (_factory2.default.objectList[index]._id !== 0 && _factory2.default.objectList[index].parent === undefined) {
 						(function () {
 							//将跟对象丢进root里
 							//步骤2：遍历children
@@ -124,7 +131,7 @@
 									check(elem, _r.children);
 								});
 							};
-							check(factory.objectList[index], _relation['root']);
+							check(_factory2.default.objectList[index], _relation['root']);
 						})();
 					}
 				}
@@ -133,12 +140,12 @@
 		}, {
 			key: 'destroy',
 			value: function destroy(_obj) {
-				factory.destroy(_obj);
+				_factory2.default.destroy(_obj);
 			}
 		}]);
 
 		return ClassLink;
-	}(Seed);
+	}(_seed2.default);
 
 	//创建全局对象
 
@@ -156,6 +163,10 @@
 /***/ function(module, exports) {
 
 	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -234,24 +245,31 @@
 	    return Seed;
 	}();
 
-	module.exports = Seed;
+	exports.default = Seed;
 
 /***/ },
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
 	'use strict';
 
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _seed = __webpack_require__(1);
+
+	var _seed2 = _interopRequireDefault(_seed);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Seed = __webpack_require__(1);
 
 	var Factory = function (_Seed) {
 	    _inherits(Factory, _Seed);
@@ -323,9 +341,9 @@
 	    }]);
 
 	    return Factory;
-	}(Seed);
+	}(_seed2.default);
 
-	module.exports = new Factory();
+	exports.default = new Factory();
 
 /***/ }
 /******/ ]);
