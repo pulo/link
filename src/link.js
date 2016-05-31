@@ -1,6 +1,7 @@
 
 import Seed from './seed';
 import factory from './factory';
+
 class ClassLink extends Seed {
 	constructor() {
 		super();
@@ -8,12 +9,10 @@ class ClassLink extends Seed {
 		this.Seed = Seed;
 	}
 	create(_class, _opt, _context) {
-		
 		if((arguments.length==2)&&(_opt._id)){
 					_context = _opt;
 				_opt = {};
 		}
-		
 		return factory.create(_class, _opt, _context);
 	}
 	find(tag) {
@@ -28,7 +27,6 @@ class ClassLink extends Seed {
 	getObjectList() {
 		return factory.objectList;
 	}
-	
 
 	//获取所有对象的关系，返回一个对象形态
 	getObjectRelation(){
@@ -62,7 +60,6 @@ class ClassLink extends Seed {
 		factory.destroy(_obj);
 	}
 }
-
 //创建全局对象
 if (global) {//说明是node
 	if(!global.Link)global.Link = new ClassLink();

@@ -1,5 +1,3 @@
-
-
 import Seed from './seed';
 
 class Factory extends Seed{

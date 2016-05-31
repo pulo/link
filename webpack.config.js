@@ -1,18 +1,20 @@
 var webpack = require("webpack");
 var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
+
+
 module.exports = {
     entry: "./src/link.js",
-    debug:true,
+    debug:false,
+    context: __dirname,
     devtool:"source-map",
-    // devServer: {
-    //     historyApiFallback: true,
-    //     hot: true,
-    //     inline: true,
-    //     progress: true,
-    // },
     output: {
-        path: "./build",
+        path: __dirname + "/build",
         filename: "link.js",
+        publicPath: "/assets",
+        
+    },
+    devServer: {
+        port:9999,
     },
     module: {
         loaders:[

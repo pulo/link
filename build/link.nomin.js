@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/assets";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -80,12 +80,10 @@
 		_createClass(ClassLink, [{
 			key: 'create',
 			value: function create(_class, _opt, _context) {
-
 				if (arguments.length == 2 && _opt._id) {
 					_context = _opt;
 					_opt = {};
 				}
-
 				return _factory2.default.create(_class, _opt, _context);
 			}
 		}, {
@@ -146,7 +144,6 @@
 
 		return ClassLink;
 	}(_seed2.default);
-
 	//创建全局对象
 
 
