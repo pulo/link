@@ -102,6 +102,19 @@ object.children
 获取该对象的子对象 返回数组形态
 [subObj1,subObj2,subObj3]
 
+### on
+```
+object.on('event',function(data){
+    //do thing
+})
+```
+增加事件响应
+
+### emit
+```
+object.emit('event'[,param1,param2,...])
+```
+增加emit事件
 
 #### newTag
 ```
@@ -135,4 +148,6 @@ object._id
 
 ### history
 
-160824 不再进行babel转换，统一由使用方进行管理，否则babel转换后无法再进行extend等写法
+1.0.4
+
+16-08-24 不再进行babel转换，统一由使用方进行管理，否则babel转换后无法再进行extend等写法
