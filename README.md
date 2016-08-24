@@ -1,5 +1,6 @@
 
 
+
 ## 简介——intro
 
 ## 使用
@@ -130,3 +131,8 @@ object.tags
 object._id
 ```
 查看该对象出厂时的唯一id
+
+
+### history
+
+160824 不再进行babel转换，统一由使用方进行管理，否则babel转换后无法再进行extend等写法

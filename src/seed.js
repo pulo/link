@@ -1,11 +1,20 @@
+import events from 'events';
+
 class Seed{
     constructor() {
         this.tags = [];
         this.children = [];
         this.parent = undefined;
         this.newTag('seed');
+        this.emitter = new events.EventEmitter();
+        this.emit('after_boot');
     }
-    boot(){
+    boot(){}
+    on(){
+        this.emitter.on.apply(this,arguments);
+    }
+    emit(){
+        this.emitter.emit.apply(this,arguments);
     }
     newTag(tag){
         let isExist = false;
@@ -45,6 +54,7 @@ class Seed{
         }
     }
     destroy(){
+        this.emitter.removeAllListeners();
         Object.getOwnPropertyNames(this).forEach((index)=>{
             delete this[index];
         })

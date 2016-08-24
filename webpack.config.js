@@ -17,25 +17,25 @@ module.exports = {
         port:9999,
     },
     module: {
-        loaders:[
-            {
-                test: /\.js?$/,
-                exclude: /node_modules/,
-                loader: 'babel',
-                query: {
-                    presets: ['es2015'],
-                },
-            },
-        ],
+        // loaders:[
+        //     // {
+        //     //     test: /\.js?$/,
+        //     //     exclude: /node_modules/,
+        //     //     loader: 'babel',
+        //     //     query: {
+        //     //         presets: ['es2015'],
+        //     //     },
+        //     // },
+        // ],
         
     },
     plugins: [
-            new webpack.optimize.UglifyJsPlugin({
-                compress: {
-                    warnings: false,
-                },
-            }),
-            new UnminifiedWebpackPlugin(),
+            // new webpack.optimize.UglifyJsPlugin({
+            //     compress: {
+            //         warnings: false,
+            //     },
+            // }),
+            // new UnminifiedWebpackPlugin(),
     ],
     watch:true,
     
